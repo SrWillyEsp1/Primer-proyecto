@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta author="Guillermo Fuentes">
+	<title>Tabla Examen</title>
+</head>
+<body>
+	<!-- TABLA -->
+	<table border="2" cellpadding="2px" width="50%">
+		<tr>
+			<th>Celda 1</th>
+			<th>Celda 2</th>
+			<th>Celda 3</th>
+			<th>Celda 4</th>
+		</tr>
+		<tr>
+			<td rowspan="3" align="center">Celda 5</td>
+			<td>Celda 6</td>
+			<td colspan="2">Celda 7</td>
+		</tr>
+		<tr>
+			<td>Celda8</td>
+			<td>Celda 9</td>
+			<td rowspan="2" align="center"> Celda 10</td>
+		</tr>
+		<tr>
+			<td colspan="2">Celda 11</td>
+		</tr>
+		<caption align="bottom">Tabla con combinación de filas y columnas</caption>
+	</table>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!-- LISTAS -->
+	<ul type="none">
+		<li type="circle">Primero</li>
+		<li>
+			<ol type="I" reversed="">
+				<li>LMSGI</li>
+				<li>PROG</li>
+				<li>BDD</li>
+				<li>ED</li>
+				<li>SI</li>
+				<li>FOL</li>
+				<li>INGLÉS</li>
+			</ol>
+		</li>
+		<li type="circle">Segundo</li>
+		<li>
+			<ol type="a">
+				<li>PMDM</li>
+				<li type="i">AD</li>
+				<li>DI</li>
+				<li type="A">PSP</li>
+				<li>SGE</li>
+				<li>INGLÉS</li>
+				<li>EIE</li>
+			</ol>
+		</li>
+	</ul>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!-- FORMULARIO -->
+	<form action="examen.php" method="post">
+		<fieldset>
+			<legend>Datos Personales:</legend>	
+			<br>
+			<label for="nombre">Nombre </label>
+			<input type="text" name="nombre" required>
+			<br>
+			<br>
+			<label for="direction">Dirección </label>
+			<input type="text" name="direction" maxlength="50">
+			<br>
+			<br>
+			<label for="copo">CP </label>
+			<input type="number" name="copo" min="1000" max="60000" step="10" value="46940">
+			<br>
+			<br>
+			<label for="nacimiento">Fecha Nacimiento </label>
+			<input type="date" name="nacimiento">
+			<br>
+			<br>
+			<label for="correo">Email </label>
+			<input type="email" name="correo" placeholder="micorreo@dominio.com" pattern="[a-Z][0-9]@[a-Z].">
+			<br>
+			<br>
+			<fieldset>
+				<legend>Sexo</legend>
+				<input type="radio" name="sexo" value="1">Hombre
+				<input type="radio" name="sexo" value="2" checked>Mujer
+			</fieldset>
+			<br>
+			<br>
+			<br>
+			<input type="submit" name="submit" value="Enviar">
+			<input type="reset" name="borrar" value="Borrar">
+		</fieldset>
+	</form>
+</body>
+</html>
